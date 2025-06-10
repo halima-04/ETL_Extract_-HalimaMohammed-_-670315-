@@ -7,6 +7,13 @@ Student ID: 670315
 ## 📄 Description
 This project demonstrates Full and Incremental Extraction using ETL techniques on a synthetic sales dataset.
 
+##STRUCTURE OF THE ETL_Extract_-HalimaMohammed-_-670315-
+├── .gitignore 
+├── last_extraction.txt 
+├── etl_extract.ipynb 
+├── README.md 
+ custom_data.csv 
+
 ## 🔧 Tools Used
 - Python
 - Pandas
