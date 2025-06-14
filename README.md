@@ -28,3 +28,45 @@ This project demonstrates Full and Incremental Extraction using ETL techniques o
 
 ## 📊 Data Source
 Synthetic sales data generated using Python
+
+
+## 🔧 Lab 4 – Transformation
+
+**Transformations applied to both full and incremental data:**
+
+1. **Cleaning:**  
+   - Removed duplicate rows  
+   - Handled any missing values
+
+2. **Enrichment:**  
+   - Added a new column `Category` based on `Amount`  
+     (e.g., Low, Medium, High)
+
+3. **Structural:**  
+   - Converted `Timestamp` to datetime format  
+   - Standardized date column
+
+**Output Files:**
+- `transformed_full.csv`
+- `transformed_incremental.csv`
+
+---
+
+## 📁 Files in This Repository
+
+| File                          | Description                        |
+|-------------------------------|------------------------------------|
+| `etl_extract.ipynb`           | Main notebook for ETL steps        |
+| `custom_data.csv`             | Raw extracted data                 |
+| `transformed_full.csv`        | Transformed full dataset           |
+| `transformed_incremental.csv` | Transformed incremental dataset    |
+| `.gitignore`                  | Excludes temporary files           |
+| `README.md`                   | Project description (this file)    |
+
+---
+
+## ✅ How to Run
+
+1. Clone the repo  
+2. Open `etl_extract.ipynb` in Jupyter Notebook  
+3. Run all cells to generate transformed datasets
