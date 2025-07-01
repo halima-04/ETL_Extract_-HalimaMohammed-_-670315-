@@ -72,16 +72,40 @@ Synthetic sales data generated using Python
 3. Run all cells to generate transformed datasets
 
 
-## Lab 5 – Load
 
-### ✅ Loading Method Used
-- Data was loaded into SQLite databases using Python's `sqlite3`.
-- Parquet format also available (optional).
+## 🧪 Lab 5 – Load Phase
 
-### 🧩 Sample Code
+This lab focuses on the **Load** step in the ETL (Extract, Transform, Load) pipeline. After transforming the data in previous labs, the cleaned datasets are now loaded into structured storage formats for querying and analysis.
+
+---
+
+## ✅ Loading Method Used
+
+- The transformed CSV files were loaded into **SQLite databases** using Python’s `sqlite3` library.
+
+---
+
+## ⚙️ Tools & Libraries
+
+| Tool         | Purpose                        |
+|--------------|---------------------------------|
+| Python 3.12  | Programming language            |
+| Pandas       | Data loading & manipulation     |
+| SQLite3      | Lightweight SQL database engine |
+| Jupyter Lab  | Notebook interface              |
+
+---
+
+## 🧩 Sample Code Snippet (SQLite Load)
+
 ```python
+import pandas as pd
+import sqlite3
+
+# Load full dataset into SQLite
 df_full = pd.read_csv("transformed_full.csv")
 conn = sqlite3.connect("loaded_data/full_data.db")
 df_full.to_sql("full_data", conn, if_exists="replace", index=False)
+conn.close()
 
 
