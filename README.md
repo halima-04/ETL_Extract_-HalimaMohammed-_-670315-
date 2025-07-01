@@ -70,3 +70,18 @@ Synthetic sales data generated using Python
 1. Clone the repo  
 2. Open `etl_extract.ipynb` in Jupyter Notebook  
 3. Run all cells to generate transformed datasets
+
+
+## Lab 5 – Load
+
+### ✅ Loading Method Used
+- Data was loaded into SQLite databases using Python's `sqlite3`.
+- Parquet format also available (optional).
+
+### 🧩 Sample Code
+```python
+df_full = pd.read_csv("transformed_full.csv")
+conn = sqlite3.connect("loaded_data/full_data.db")
+df_full.to_sql("full_data", conn, if_exists="replace", index=False)
+
+
